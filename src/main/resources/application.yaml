@@ -1,0 +1,4 @@
+spring:
+  profiles.include:
+    # application-db.yaml
+    - db
