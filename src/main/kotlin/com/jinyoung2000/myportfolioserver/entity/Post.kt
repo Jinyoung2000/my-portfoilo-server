@@ -8,7 +8,7 @@ import org.springframework.data.annotation.CreatedDate
 import java.time.LocalDateTime
 
 @Entity
-class Board(
+class Post(
     val title: String,
     val content: String,
 ) {

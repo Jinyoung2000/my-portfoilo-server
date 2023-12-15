@@ -1,10 +1,10 @@
 package com.jinyoung2000.myportfolioserver.repository
 
-import com.jinyoung2000.myportfolioserver.entity.Board
+import com.jinyoung2000.myportfolioserver.entity.Post
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface BoardRepository : JpaRepository<Board, Long> {
+interface PostRepository : JpaRepository<Post, Long> {
 
 }
