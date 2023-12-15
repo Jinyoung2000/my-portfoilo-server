@@ -13,16 +13,16 @@ class PostController(
 ) {
     @GetMapping("")
     fun getAllPosts(): List<Post> {
-        return postService.getAllBoards()
+        return postService.getAllPosts()
     }
 
     @PostMapping("")
-    fun postPost(@RequestBody body: PostPostRequest): Post {
-        return postService.postBoard(body)
+    fun savePost(@RequestBody body: PostPostRequest): Post {
+        return postService.savePost(body)
     }
 
     @GetMapping("{postId}")
     fun getPost(@PathVariable postId: Long): PostResponse {
-        return postService.getBoard(postId)
+        return postService.getPost(postId)
     }
 }

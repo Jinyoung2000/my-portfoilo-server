@@ -11,16 +11,16 @@ import org.springframework.stereotype.Service
 class PostService(
     private val postRepository: PostRepository
 ) {
-    fun getAllBoards(): List<Post> {
+    fun getAllPosts(): List<Post> {
         return postRepository.findAll()
     }
 
-    fun getBoard(id: Long): PostResponse {
+    fun getPost(id: Long): PostResponse {
         return PostResponse.toPostResponse(postRepository.getReferenceById(id))
     }
 
     @Transactional
-    fun postBoard(request: PostPostRequest): Post {
+    fun savePost(request: PostPostRequest): Post {
         with(request) {
             return postRepository.save(Post(title, content))
         }
